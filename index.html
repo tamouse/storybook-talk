@@ -7,9 +7,9 @@
 <style type="text/css">
 .underline { text-decoration: underline; }
 </style>
-<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
 
-<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/moon.css" id="theme"/>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/moon.css" id="theme"/>
 
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
@@ -18,7 +18,7 @@
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        link.href = '//cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     }
 </script>
@@ -28,12 +28,12 @@
 <div class="reveal">
 <div class="slides">
 <style media="screen">
-@import url("https://fonts.googleapis.com/css?family=Montserrat:700,700i");
+@import url("//fonts.googleapis.com/css?family=Montserrat:700,700i");
 .reveal h1,.reveal h2,.reveal h3,.reveal h4,.reveal h5,.reveal h6 {
 text-transform: inherit; font-family: "Montserrat", sans-serif; font-weight: bold;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400i");
+@import url("//fonts.googleapis.com/css?family=Lato:400,400i");
 .reveal section. .reveal div, .reveal p, .reveal ul, .reveal ol, .reveal li, .reveal dl, .reveal dt, .reveal dd,
 .reveal blockquote, .reveal q, .reveal aside, .reveal figure, .reveal figcaption, .reveal article, .reveal header,
 .reveal footer, .reveal span, .reveal i, .reveal b, .reveal em, .reveal strong {
@@ -43,8 +43,8 @@ font-family: "Lato", sans-serif;
 </style>
 
 <section>
-<section id="slide-org50a1f39">
-<h2 id="org50a1f39">STORYBOOK DEMO</h2>
+<section id="slide-orga8eb7ac">
+<h2 id="orga8eb7ac">STORYBOOK DEMO</h2>
 <p>
 15-minute Demo / Lightning talk
 </p>
@@ -52,8 +52,8 @@ font-family: "Lato", sans-serif;
 </section>
 </section>
 <section>
-<section id="slide-org25384ab">
-<h2 id="org25384ab">Background</h2>
+<section id="slide-org40b01b4">
+<h2 id="org40b01b4">Background</h2>
 <ul>
 <li>11 year old Ruby on Rails project</li>
 <li>React components started being added about 4 years ago</li>
@@ -65,8 +65,8 @@ font-family: "Lato", sans-serif;
 </section>
 </section>
 <section>
-<section id="slide-orgf0ae3fc">
-<h2 id="orgf0ae3fc">What is Storybook?</h2>
+<section id="slide-org6369fcf">
+<h2 id="org6369fcf">What is Storybook?</h2>
 <p>
 An environment to house components for display, interaction, and demostration
 </p>
@@ -78,8 +78,8 @@ An environment to house components for display, interaction, and demostration
 </section>
 </section>
 <section>
-<section id="slide-orge59c213">
-<h2 id="orge59c213">Demo</h2>
+<section id="slide-orgfacf2ec">
+<h2 id="orgfacf2ec">Demo</h2>
 <p>
 <code>cd demo</code>
 </p>
@@ -95,8 +95,8 @@ Start demo: <code>yarn storybook</code>
 </section>
 </section>
 <section>
-<section id="slide-org25f3a73">
-<h2 id="org25f3a73">Config</h2>
+<section id="slide-orgdb36ee1">
+<h2 id="orgdb36ee1">Config</h2>
 <div class="org-src-container">
 
 <pre  class="src src-javascript"><span style="color: #00ffff;">import</span> { configure } from <span style="color: #ffff00;">'@storybook/react'</span>;
@@ -116,8 +116,8 @@ configure(loadStories, module);
 </section>
 </section>
 <section>
-<section id="slide-org6061f18">
-<h2 id="org6061f18">Writing Stories</h2>
+<section id="slide-org2d7a15a">
+<h2 id="org2d7a15a">Writing Stories</h2>
 <div class="org-src-container">
 
 <pre  class="src src-javascript"><span style="color: #00ffff;">import</span> React from <span style="color: #ffff00;">"react"</span>
@@ -148,8 +148,8 @@ storiesOf(<span style="color: #ffff00;">"ButtOn"</span>, module)
 </div>
 </div>
 <div> Created by Tamara Temple &lt;tamara@tamouse.org&gt; </div>
-<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
-<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+<script src="//cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="//cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
 
 <script>
 // Full list of configuration options available here:
@@ -176,9 +176,9 @@ multiplex: {
 
 // Optional libraries used to extend on reveal.js
 dependencies: [
- { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+ { src: '//cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: '//cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: '//cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
 });
 </script>
 </body>
