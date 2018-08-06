@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title></title>
+<meta name="author" content="(Tamara Temple)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<meta name="description" content="description">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<style media="screen">
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700,700i");
+.reveal h1,.reveal h2,.reveal h3,.reveal h4,.reveal h5,.reveal h6 {
+text-transform: inherit; font-family: "Montserrat", sans-serif; font-weight: bold;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i");
+.reveal section. .reveal div, .reveal p, .reveal ul, .reveal ol, .reveal li, .reveal dl, .reveal dt, .reveal dd,
+.reveal blockquote, .reveal q, .reveal aside, .reveal figure, .reveal figcaption, .reveal article, .reveal header,
+.reveal footer, .reveal span, .reveal i, .reveal b, .reveal em, .reveal strong {
+font-family: "Lato", sans-serif;
+}
+.reveal .slide-number { color: white; }
+</style>
+
+<section>
+<section id="slide-org50a1f39">
+<h2 id="org50a1f39">STORYBOOK DEMO</h2>
+<p>
+15-minute Demo / Lightning talk
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org25384ab">
+<h2 id="org25384ab">Background</h2>
+<ul>
+<li>11 year old Ruby on Rails project</li>
+<li>React components started being added about 4 years ago</li>
+<li>Standalone react web client started a couple years ago</li>
+<li>Began working on the standalone client + graphql interface about a little over a year ago</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf0ae3fc">
+<h2 id="orgf0ae3fc">What is Storybook?</h2>
+<p>
+An environment to house components for display, interaction, and demostration
+</p>
+
+<p>
+<a href="https://storybook.js.org/">https://storybook.js.org/</a>
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orge59c213">
+<h2 id="orge59c213">Demo</h2>
+<p>
+<code>cd demo</code>
+</p>
+
+<p>
+Start demo: <code>yarn storybook</code>
+</p>
+
+<p>
+<a href="http://localhost:9009">http://localhost:9009</a>
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org25f3a73">
+<h2 id="org25f3a73">Config</h2>
+<div class="org-src-container">
+
+<pre  class="src src-javascript"><span style="color: #00ffff;">import</span> { configure } from <span style="color: #ffff00;">'@storybook/react'</span>;
+
+<span style="color: #00ffff;">function</span> <span style="color: #4186be;">loadStories</span>() {
+  require(<span style="color: #ffff00;">'../src/stories'</span>);
+}
+
+configure(loadStories, module);
+</pre>
+</div>
+
+<p>
+<b><a href="https://storybook.js.org/basics/guide-react/#create-the-config-file">reference</a></b>
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org6061f18">
+<h2 id="org6061f18">Writing Stories</h2>
+<div class="org-src-container">
+
+<pre  class="src src-javascript"><span style="color: #00ffff;">import</span> React from <span style="color: #ffff00;">"react"</span>
+<span style="color: #00ffff;">import</span> { storiesOf } from <span style="color: #ffff00;">"@storybook/react"</span>
+<span style="color: #00ffff;">import</span> { action } from <span style="color: #ffff00;">"@storybook/addon-actions"</span>
+
+<span style="color: #ff0000;">// </span><span style="color: #ff0000;">Import our Component Under Test</span>
+<span style="color: #00ffff;">import</span> { ButtOn } from <span style="color: #ffff00;">"../components/ButtOn"</span>
+
+<span style="color: #ff0000;">// </span><span style="color: #ff0000;">Create Stories</span>
+storiesOf(<span style="color: #ffff00;">"ButtOn"</span>, module)
+  <span style="color: #ff0000;">// </span><span style="color: #ff0000;">Story Scenario One</span>
+  .add(<span style="color: #ffff00;">"click me!"</span>, () =&gt; (
+    &lt;ButtOn onClick={action(<span style="color: #ffff00;">"Click Me! was clicked"</span>)}&gt;Click Me!&lt;/ButtOn&gt;
+  ))
+  <span style="color: #ff0000;">// </span><span style="color: #ff0000;">Story Scenario Two</span>
+  .add(<span style="color: #ffff00;">"click 2"</span>, () =&gt; (
+    &lt;ButtOn onClick={action(<span style="color: #ffff00;">"Clicker2 was clicked"</span>)}&gt;Clicker2&lt;/ButtOn&gt;
+  ))
+</pre>
+</div>
+
+<p>
+<b><a href="https://storybook.js.org/basics/guide-react/#write-your-stories">reference</a></b>
+</p>
+</section>
+</section>
+</div>
+</div>
+<div> Created by Tamara Temple &lt;tamara@tamouse.org&gt; </div>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/head.min.js"></script>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: true,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

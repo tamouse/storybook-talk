@@ -1,0 +1,88 @@
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:nil reveal_control:t reveal_title_slide:nil
+#+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: toc:nil
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_TRANS: none
+#+REVEAL_THEME: moon
+#+REVEAL_HEAD_PREAMBLE: <meta name="description" content="description">
+#+REVEAL_POSTAMBLE: <div> Created by Tamara Temple &lt;tamara@tamouse.org&gt; </div>
+#+REVEAL_PLUGINS: (markdown notes)
+#+BEGIN_EXPORT html
+<style media="screen">
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700,700i");
+.reveal h1,.reveal h2,.reveal h3,.reveal h4,.reveal h5,.reveal h6 {
+text-transform: inherit; font-family: "Montserrat", sans-serif; font-weight: bold;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i");
+.reveal section. .reveal div, .reveal p, .reveal ul, .reveal ol, .reveal li, .reveal dl, .reveal dt, .reveal dd,
+.reveal blockquote, .reveal q, .reveal aside, .reveal figure, .reveal figcaption, .reveal article, .reveal header,
+.reveal footer, .reveal span, .reveal i, .reveal b, .reveal em, .reveal strong {
+font-family: "Lato", sans-serif;
+}
+.reveal .slide-number { color: white; }
+</style>
+#+END_EXPORT
+
+* STORYBOOK DEMO
+
+15-minute Demo / Lightning talk
+
+* Background
+
+- 11 year old Ruby on Rails project
+- React components started being added about 4 years ago
+- Standalone react web client started a couple years ago
+- Began working on the standalone client + graphql interface about a little over a year ago
+
+* What is Storybook?
+
+An environment to house components for display, interaction, and demostration
+
+https://storybook.js.org/
+
+* Demo
+
+~cd demo~
+
+Start demo: ~yarn storybook~
+
+http://localhost:9009
+
+* Config
+
+#+BEGIN_SRC javascript
+import { configure } from '@storybook/react';
+
+function loadStories() {
+  require('../src/stories');
+}
+
+configure(loadStories, module);
+#+END_SRC
+
+*[[https://storybook.js.org/basics/guide-react/#create-the-config-file][reference]]*
+
+* Writing Stories
+
+#+BEGIN_SRC javascript
+import React from "react"
+import { storiesOf } from "@storybook/react"
+import { action } from "@storybook/addon-actions"
+
+// Import our Component Under Test
+import { ButtOn } from "../components/ButtOn"
+
+// Create Stories
+storiesOf("ButtOn", module)
+  // Story Scenario One
+  .add("click me!", () => (
+    <ButtOn onClick={action("Click Me! was clicked")}>Click Me!</ButtOn>
+  ))
+  // Story Scenario Two
+  .add("click 2", () => (
+    <ButtOn onClick={action("Clicker2 was clicked")}>Clicker2</ButtOn>
+  ))
+#+END_SRC
+
+*[[https://storybook.js.org/basics/guide-react/#write-your-stories][reference]]*
