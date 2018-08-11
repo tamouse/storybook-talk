@@ -1,4 +1,4 @@
-#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:nil reveal_control:t reveal_title_slide:nil
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:t reveal_control:t reveal_title_slide:nil
 #+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
 #+OPTIONS: toc:nil
 #+REVEAL_ROOT: //cdn.jsdelivr.net/reveal.js/3.0.0/
@@ -34,6 +34,13 @@ font-family: "Lato", sans-serif;
 - React components started being added about 4 years ago
 - Standalone react web client started a couple years ago
 - Began working on the standalone client + graphql interface about a little over a year ago
+
+* What was the problem?
+
+- Learning React, I wasn't sure how things would look and work
+- Just writing unit tests was not enough to know if I'd implemented the component correctly
+- Build and interact with components without needing the entire app behind it
+- Top-down design, Bottom-up implementation (very Lisp-like for me)
 
 * What is Storybook?
 

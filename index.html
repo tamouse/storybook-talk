@@ -43,8 +43,8 @@ font-family: "Lato", sans-serif;
 </style>
 
 <section>
-<section id="slide-orga8eb7ac">
-<h2 id="orga8eb7ac">STORYBOOK DEMO</h2>
+<section id="slide-org0fbb91c">
+<h2 id="org0fbb91c">STORYBOOK DEMO</h2>
 <p>
 15-minute Demo / Lightning talk
 </p>
@@ -52,8 +52,8 @@ font-family: "Lato", sans-serif;
 </section>
 </section>
 <section>
-<section id="slide-org40b01b4">
-<h2 id="org40b01b4">Background</h2>
+<section id="slide-org76ac0b2">
+<h2 id="org76ac0b2">Background</h2>
 <ul>
 <li>11 year old Ruby on Rails project</li>
 <li>React components started being added about 4 years ago</li>
@@ -65,8 +65,21 @@ font-family: "Lato", sans-serif;
 </section>
 </section>
 <section>
-<section id="slide-org6369fcf">
-<h2 id="org6369fcf">What is Storybook?</h2>
+<section id="slide-org8b6475f">
+<h2 id="org8b6475f">What was the problem?</h2>
+<ul>
+<li>Learning React, I wasn't sure how things would look and work</li>
+<li>Just writing unit tests was not enough to know if I'd implemented the component correctly</li>
+<li>Build and interact with components without needing the entire app behind it</li>
+<li>Top-down design, Bottom-up implementation (very Lisp-like for me)</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org50e6f21">
+<h2 id="org50e6f21">What is Storybook?</h2>
 <p>
 An environment to house components for display, interaction, and demostration
 </p>
@@ -78,8 +91,8 @@ An environment to house components for display, interaction, and demostration
 </section>
 </section>
 <section>
-<section id="slide-orgfacf2ec">
-<h2 id="orgfacf2ec">Demo</h2>
+<section id="slide-org5be6d7f">
+<h2 id="org5be6d7f">Demo</h2>
 <p>
 <code>cd demo</code>
 </p>
@@ -95,8 +108,8 @@ Start demo: <code>yarn storybook</code>
 </section>
 </section>
 <section>
-<section id="slide-orgdb36ee1">
-<h2 id="orgdb36ee1">Config</h2>
+<section id="slide-org4392e10">
+<h2 id="org4392e10">Config</h2>
 <div class="org-src-container">
 
 <pre  class="src src-javascript"><span style="color: #00ffff;">import</span> { configure } from <span style="color: #ffff00;">'@storybook/react'</span>;
@@ -116,8 +129,8 @@ configure(loadStories, module);
 </section>
 </section>
 <section>
-<section id="slide-org2d7a15a">
-<h2 id="org2d7a15a">Writing Stories</h2>
+<section id="slide-orgb327809">
+<h2 id="orgb327809">Writing Stories</h2>
 <div class="org-src-container">
 
 <pre  class="src src-javascript"><span style="color: #00ffff;">import</span> React from <span style="color: #ffff00;">"react"</span>
@@ -158,7 +171,7 @@ Reveal.initialize({
 
 controls: true,
 progress: true,
-history: false,
+history: true,
 center: true,
 slideNumber: 'c',
 rollingLinks: true,
