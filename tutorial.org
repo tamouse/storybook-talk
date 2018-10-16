@@ -1,0 +1,134 @@
+#+TITLE: Storybook Tutorial
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:t reveal_control:t reveal-title-slide:auto
+#+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: toc:nil
+#+REVEAL_TRANS: none
+#+REVEAL_THEME: moon
+#+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Storybook Tutorial">
+#+REVEAL_POSTAMBLE: <div> Created by Tamara Temple &lt;tamara@tamouse.org&gt; </div>
+#+REVEAL_PLUGINS: (markdown notes)
+#+BEGIN_EXPORT html
+<style media="screen">
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700,700i");
+.reveal h1,.reveal h2,.reveal h3,.reveal h4,.reveal h5,.reveal h6 {
+text-transform: inherit; font-family: "Monserrat", sans-serif; font-weight: bold;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i");
+.reveal section. .reveal div, .reveal p, .reveal ul, .reveal ol, .reveal li, .reveal dl, .reveal dt, .reveal dd,
+.reveal blockquote, .reveal q, .reveal aside, .reveal figure, .reveal figcaption, .reveal article, .reveal header,
+.reveal footer, .reveal span, .reveal i, .reveal b, .reveal em, .reveal strong {
+font-family: "Lato", sans-serif;
+}
+.reveal .slide-number { color: white; }
+</style>
+#+END_EXPORT
+
+* Introduction
+
+  Storybook Tutorial
+
+** who am I
+
+#+ATTR_REVEAL: :frag (fade-in)
+   - Tamara Temple
+   - github: tamouse
+   - Software developer for a (very) long time.
+   - Primary focus on back-end development for past 20 years.
+   - React development since middle of 2017
+   - nearly full-time
+   - still do back-end Rails + GraphQL server work
+
+
+** what is storybook?
+
+#+ATTR_REVEAL: :frag (fade-in)
+   - UI development environment for UI components
+   - visualize different states of your UI components
+   - develop them interactively
+   - runs outside of your app
+   - develop UI components in isolation
+   - without app-specific dependencies and requirements
+
+
+* Installation / Configuration
+
+** Install the storybook cli script globally
+
+   #+BEGIN_SRC shell-script
+    npm install -g @storybook/cli
+
+    # - or -
+
+    yarn global add @storybook/cli
+  #+END_SRC
+
+** Add it to your project
+
+   #+BEGIN_SRC shell-script
+     cd path/to/project
+     getstorybook
+   #+END_SRC
+
+** Start compiling stories
+
+   #+BEGIN_SRC shell-script
+     npm run storybook
+
+     # -or-
+
+     yarn storybook
+   #+END_SRC
+* Basic usage
+
+** A simple component
+
+** A simple set of stories
+
+* Interactions with components
+
+** actions
+
+* Organizing stories
+
+** Follow the same organizing principles you use with tests
+
+   - in separate tree
+   - alongside component
+
+** Share test data
+
+   Reuse test data from your specs by organizing it to share
+
+* Extending stories using addons
+
+  Besides the aforementioned ~actions~ addon, storybook has many other *addons*:
+
+  [[https://storybook.js.org/addons/addon-gallery/]]
+
+** Small set I've used:
+
+   - *Actions*: event "inspector"
+   - *Apollo*: a mock Apollo Client provider
+   - *Storybook-router*: router providers for React and Vue
+
+* Tips
+
+** use a Consumer
+
+   - keep stories light
+   - common elements to present the story
+
+** using jsdoc and markup
+
+   Extract and display in story
+
+** generators
+
+   Create component, spec, and story boilerplate
+
+* @me
+
+  - Tamara Temple
+  - github: tamouse
+  - twitter: @tamouse

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Storybook Tutorial</title>
+<meta name="author" content="(Tamara Temple)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="./reveal.js/css/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<meta name="description" content="Storybook Tutorial">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Storybook Tutorial</h1><h2 class="author">Tamara Temple</h2><p class="date">Created: 2018-10-16 Tue 09:41</p>
+</section>
+<style media="screen">
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700,700i");
+.reveal h1,.reveal h2,.reveal h3,.reveal h4,.reveal h5,.reveal h6 {
+text-transform: inherit; font-family: "Monserrat", sans-serif; font-weight: bold;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i");
+.reveal section. .reveal div, .reveal p, .reveal ul, .reveal ol, .reveal li, .reveal dl, .reveal dt, .reveal dd,
+.reveal blockquote, .reveal q, .reveal aside, .reveal figure, .reveal figcaption, .reveal article, .reveal header,
+.reveal footer, .reveal span, .reveal i, .reveal b, .reveal em, .reveal strong {
+font-family: "Lato", sans-serif;
+}
+.reveal .slide-number { color: white; }
+</style>
+
+<section>
+<section id="slide-orgc813cf0">
+<h2 id="orgc813cf0">Introduction</h2>
+<div class="outline-text-2" id="text-orgc813cf0">
+</div>
+</section>
+<section id="slide-org4e6e4ed">
+<h3 id="org4e6e4ed">who am I</h3>
+<ul>
+<li class="fragment fade-in">Tamara Temple</li>
+<li class="fragment fade-in">github: tamouse</li>
+<li class="fragment fade-in">Software developer for a (very) long time.</li>
+<li class="fragment fade-in">Primary focus on back-end development for past 20 years.</li>
+<li class="fragment fade-in">React development since middle of 2017</li>
+<li class="fragment fade-in">nearly full-time</li>
+<li class="fragment fade-in">still do back-end Rails + GraphQL server work</li>
+
+</ul>
+
+
+</section>
+<section id="slide-org5dee3ed">
+<h3 id="org5dee3ed">what is storybook?</h3>
+<ul>
+<li class="fragment fade-in">UI development environment for UI components</li>
+<li class="fragment fade-in">visualize different states of your UI components</li>
+<li class="fragment fade-in">develop them interactively</li>
+<li class="fragment fade-in">runs outside of your app</li>
+<li class="fragment fade-in">develop UI components in isolation</li>
+<li class="fragment fade-in">withou app-specific dependencies and requirements</li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org1061407">
+<h2 id="org1061407">Installation / Configuration</h2>
+<div class="outline-text-2" id="text-org1061407">
+</div>
+</section>
+<section id="slide-org30fefb5">
+<h3 id="org30fefb5">Install the storybook cli script globally</h3>
+<div class="org-src-container">
+
+<pre  class="src src-shell-script">npm install -g @storybook/cli
+
+<span style="color: #ff0000;"># </span><span style="color: #ff0000;">- or -</span>
+
+yarn global add @storybook/cli
+</pre>
+</div>
+
+</section>
+<section id="slide-org1afe71d">
+<h3 id="org1afe71d">Add it to your project</h3>
+<div class="org-src-container">
+
+<pre  class="src src-shell-script"><span style="color: #ffaa00;">cd</span> path/to/project
+getstorybook
+</pre>
+</div>
+
+</section>
+<section id="slide-orgd243e30">
+<h3 id="orgd243e30">Start compiling stories</h3>
+<div class="org-src-container">
+
+<pre  class="src src-shell-script">npm run storybook
+
+<span style="color: #ff0000;"># </span><span style="color: #ff0000;">-or-</span>
+
+yarn storybook
+</pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org2300ff9">
+<h2 id="org2300ff9">Basic usage</h2>
+<div class="outline-text-2" id="text-org2300ff9">
+</div>
+</section>
+<section id="slide-orgad74638">
+<h3 id="orgad74638">A simple component</h3>
+
+</section>
+<section id="slide-org43187b5">
+<h3 id="org43187b5">A simple set of stories</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-org228e027">
+<h2 id="org228e027">Interactions with components</h2>
+<div class="outline-text-2" id="text-org228e027">
+</div>
+</section>
+<section id="slide-org082ab69">
+<h3 id="org082ab69">actions</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-org3008362">
+<h2 id="org3008362">Organizing stories</h2>
+<div class="outline-text-2" id="text-org3008362">
+</div>
+</section>
+<section id="slide-orge74b2a7">
+<h3 id="orge74b2a7">Follow the same organizing principles you use with tests</h3>
+<ul>
+<li>in separate tree</li>
+<li>alongside component</li>
+
+</ul>
+
+</section>
+<section id="slide-orgc4537e0">
+<h3 id="orgc4537e0">Share test data</h3>
+<p>
+Reuse test data from your specs by organizing it to share
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org5b0abdc">
+<h2 id="org5b0abdc">Extending stories using addons</h2>
+<p>
+Besides the aforementioned <code>actions</code> addon, storybook has many other <b>addons</b>:
+</p>
+
+<p>
+<a href="https://storybook.js.org/addons/addon-gallery/">https://storybook.js.org/addons/addon-gallery/</a>
+</p>
+
+</section>
+<section id="slide-org4cb8629">
+<h3 id="org4cb8629">Small set I've used:</h3>
+<ul>
+<li><b>Actions</b>: event "inspector"</li>
+<li><b>Apollo</b>: a mock Apollo Client provider</li>
+<li><b>Storybook-router</b>: router providers for React and Vue</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org760d950">
+<h2 id="org760d950">Tips</h2>
+<div class="outline-text-2" id="text-org760d950">
+</div>
+</section>
+<section id="slide-org72259f9">
+<h3 id="org72259f9">use a Consumer</h3>
+<ul>
+<li>keep stories light</li>
+<li>common elements to present the story</li>
+
+</ul>
+
+</section>
+<section id="slide-orgb47c44b">
+<h3 id="orgb47c44b">using jsdoc and markup</h3>
+<p>
+Extract and display in story
+</p>
+
+</section>
+<section id="slide-org705c773">
+<h3 id="org705c773">generators</h3>
+<p>
+Create component, spec, and story boilerplate
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org2d275d5">
+<h2 id="org2d275d5">@me</h2>
+<ul>
+<li>Tamara Temple</li>
+<li>github: tamouse</li>
+<li>twitter: @tamouse</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<div> Created by Tamara Temple &lt;tamara@tamouse.org&gt; </div>
+<script src="./reveal.js/lib/js/head.min.js"></script>
+<script src="./reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: true,
+center: true,
+slideNumber: 'c',
+rollingLinks: true,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
