@@ -9,7 +9,7 @@
 </style>
 <link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
 
-<link rel="stylesheet" href="./reveal.js/css/theme/moon.css" id="theme"/>
+<link rel="stylesheet" href="./reveal.js/css/theme/white.css" id="theme"/>
 
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
@@ -27,7 +27,7 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section id="sec-title-slide"><h1 class="title">Storybook Tutorial</h1><h2 class="author">Tamara Temple</h2><p class="date">Created: 2018-10-16 Tue 09:41</p>
+<section id="sec-title-slide"><h1 class="title">Storybook Tutorial</h1><h2 class="author">Tamara Temple</h2><p class="date">Created: 2018-10-16 Tue 09:58</p>
 </section>
 <style media="screen">
 @import url("https://fonts.googleapis.com/css?family=Montserrat:700,700i");
@@ -45,13 +45,15 @@ font-family: "Lato", sans-serif;
 </style>
 
 <section>
-<section id="slide-orgc813cf0">
-<h2 id="orgc813cf0">Introduction</h2>
-<div class="outline-text-2" id="text-orgc813cf0">
-</div>
+<section id="slide-org4500b9a">
+<h2 id="org4500b9a">Introduction</h2>
+<p>
+Storybook Tutorial
+</p>
+
 </section>
-<section id="slide-org4e6e4ed">
-<h3 id="org4e6e4ed">who am I</h3>
+<section id="slide-org68ad9b1">
+<h3 id="org68ad9b1">who am I</h3>
 <ul>
 <li class="fragment fade-in">Tamara Temple</li>
 <li class="fragment fade-in">github: tamouse</li>
@@ -65,15 +67,15 @@ font-family: "Lato", sans-serif;
 
 
 </section>
-<section id="slide-org5dee3ed">
-<h3 id="org5dee3ed">what is storybook?</h3>
+<section id="slide-org0208bad">
+<h3 id="org0208bad">what is storybook?</h3>
 <ul>
 <li class="fragment fade-in">UI development environment for UI components</li>
 <li class="fragment fade-in">visualize different states of your UI components</li>
 <li class="fragment fade-in">develop them interactively</li>
 <li class="fragment fade-in">runs outside of your app</li>
 <li class="fragment fade-in">develop UI components in isolation</li>
-<li class="fragment fade-in">withou app-specific dependencies and requirements</li>
+<li class="fragment fade-in">without app-specific dependencies and requirements</li>
 
 </ul>
 
@@ -81,13 +83,21 @@ font-family: "Lato", sans-serif;
 </section>
 </section>
 <section>
-<section id="slide-org1061407">
-<h2 id="org1061407">Installation / Configuration</h2>
-<div class="outline-text-2" id="text-org1061407">
+<section id="slide-org34f8b6e">
+<h2 id="org34f8b6e">Installation / Configuration</h2>
+<p>
+Start with your existing react app
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-shell-script"><span style="color: #ffaa00;">cd</span> path/to/project
+</pre>
 </div>
+
 </section>
-<section id="slide-org30fefb5">
-<h3 id="org30fefb5">Install the storybook cli script globally</h3>
+<section id="slide-org0918976">
+<h3 id="org0918976">Install the storybook cli script globally</h3>
 <div class="org-src-container">
 
 <pre  class="src src-shell-script">npm install -g @storybook/cli
@@ -99,18 +109,17 @@ yarn global add @storybook/cli
 </div>
 
 </section>
-<section id="slide-org1afe71d">
-<h3 id="org1afe71d">Add it to your project</h3>
+<section id="slide-org1b1c147">
+<h3 id="org1b1c147">Add it to your project</h3>
 <div class="org-src-container">
 
-<pre  class="src src-shell-script"><span style="color: #ffaa00;">cd</span> path/to/project
-getstorybook
+<pre  class="src src-shell-script">getstorybook
 </pre>
 </div>
 
 </section>
-<section id="slide-orgd243e30">
-<h3 id="orgd243e30">Start compiling stories</h3>
+<section id="slide-orgeaf1b6f">
+<h3 id="orgeaf1b6f">Start compiling stories</h3>
 <div class="org-src-container">
 
 <pre  class="src src-shell-script">npm run storybook
@@ -123,39 +132,39 @@ yarn storybook
 </section>
 </section>
 <section>
-<section id="slide-org2300ff9">
-<h2 id="org2300ff9">Basic usage</h2>
-<div class="outline-text-2" id="text-org2300ff9">
+<section id="slide-org6ae4e85">
+<h2 id="org6ae4e85">Basic usage</h2>
+<div class="outline-text-2" id="text-org6ae4e85">
 </div>
 </section>
-<section id="slide-orgad74638">
-<h3 id="orgad74638">A simple component</h3>
+<section id="slide-orgba995bf">
+<h3 id="orgba995bf">A simple component</h3>
 
 </section>
-<section id="slide-org43187b5">
-<h3 id="org43187b5">A simple set of stories</h3>
-
-</section>
-</section>
-<section>
-<section id="slide-org228e027">
-<h2 id="org228e027">Interactions with components</h2>
-<div class="outline-text-2" id="text-org228e027">
-</div>
-</section>
-<section id="slide-org082ab69">
-<h3 id="org082ab69">actions</h3>
+<section id="slide-org111ea2d">
+<h3 id="org111ea2d">A simple set of stories</h3>
 
 </section>
 </section>
 <section>
-<section id="slide-org3008362">
-<h2 id="org3008362">Organizing stories</h2>
-<div class="outline-text-2" id="text-org3008362">
+<section id="slide-org51a07ca">
+<h2 id="org51a07ca">Interactions with components</h2>
+<div class="outline-text-2" id="text-org51a07ca">
 </div>
 </section>
-<section id="slide-orge74b2a7">
-<h3 id="orge74b2a7">Follow the same organizing principles you use with tests</h3>
+<section id="slide-orge5ae069">
+<h3 id="orge5ae069">actions</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-org1ab84f2">
+<h2 id="org1ab84f2">Organizing stories</h2>
+<div class="outline-text-2" id="text-org1ab84f2">
+</div>
+</section>
+<section id="slide-org29ccf02">
+<h3 id="org29ccf02">Follow the same organizing principles you use with tests</h3>
 <ul>
 <li>in separate tree</li>
 <li>alongside component</li>
@@ -163,8 +172,8 @@ yarn storybook
 </ul>
 
 </section>
-<section id="slide-orgc4537e0">
-<h3 id="orgc4537e0">Share test data</h3>
+<section id="slide-orgf13379f">
+<h3 id="orgf13379f">Share test data</h3>
 <p>
 Reuse test data from your specs by organizing it to share
 </p>
@@ -172,8 +181,8 @@ Reuse test data from your specs by organizing it to share
 </section>
 </section>
 <section>
-<section id="slide-org5b0abdc">
-<h2 id="org5b0abdc">Extending stories using addons</h2>
+<section id="slide-org6236993">
+<h2 id="org6236993">Extending stories using addons</h2>
 <p>
 Besides the aforementioned <code>actions</code> addon, storybook has many other <b>addons</b>:
 </p>
@@ -183,8 +192,8 @@ Besides the aforementioned <code>actions</code> addon, storybook has many other 
 </p>
 
 </section>
-<section id="slide-org4cb8629">
-<h3 id="org4cb8629">Small set I've used:</h3>
+<section id="slide-orgd874924">
+<h3 id="orgd874924">Small set I've used:</h3>
 <ul>
 <li><b>Actions</b>: event "inspector"</li>
 <li><b>Apollo</b>: a mock Apollo Client provider</li>
@@ -195,13 +204,13 @@ Besides the aforementioned <code>actions</code> addon, storybook has many other 
 </section>
 </section>
 <section>
-<section id="slide-org760d950">
-<h2 id="org760d950">Tips</h2>
-<div class="outline-text-2" id="text-org760d950">
+<section id="slide-org45b12d7">
+<h2 id="org45b12d7">Tips</h2>
+<div class="outline-text-2" id="text-org45b12d7">
 </div>
 </section>
-<section id="slide-org72259f9">
-<h3 id="org72259f9">use a Consumer</h3>
+<section id="slide-org00fa005">
+<h3 id="org00fa005">use a Consumer</h3>
 <ul>
 <li>keep stories light</li>
 <li>common elements to present the story</li>
@@ -209,15 +218,15 @@ Besides the aforementioned <code>actions</code> addon, storybook has many other 
 </ul>
 
 </section>
-<section id="slide-orgb47c44b">
-<h3 id="orgb47c44b">using jsdoc and markup</h3>
+<section id="slide-org5b2f6f0">
+<h3 id="org5b2f6f0">using jsdoc and markup</h3>
 <p>
 Extract and display in story
 </p>
 
 </section>
-<section id="slide-org705c773">
-<h3 id="org705c773">generators</h3>
+<section id="slide-orgdec0314">
+<h3 id="orgdec0314">generators</h3>
 <p>
 Create component, spec, and story boilerplate
 </p>
@@ -225,8 +234,8 @@ Create component, spec, and story boilerplate
 </section>
 </section>
 <section>
-<section id="slide-org2d275d5">
-<h2 id="org2d275d5">@me</h2>
+<section id="slide-org7bc7b13">
+<h2 id="org7bc7b13">@me</h2>
 <ul>
 <li>Tamara Temple</li>
 <li>github: tamouse</li>

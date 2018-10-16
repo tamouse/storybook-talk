@@ -3,7 +3,7 @@
 #+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
 #+OPTIONS: toc:nil
 #+REVEAL_TRANS: none
-#+REVEAL_THEME: moon
+#+REVEAL_THEME: solarized
 #+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Storybook Tutorial">
 #+REVEAL_POSTAMBLE: <div> Created by Tamara Temple &lt;tamara@tamouse.org&gt; </div>
 #+REVEAL_PLUGINS: (markdown notes)
@@ -53,6 +53,12 @@ font-family: "Lato", sans-serif;
 
 * Installation / Configuration
 
+  Start with your existing react app
+
+  #+BEGIN_SRC shell-script
+     cd path/to/project
+  #+END_SRC
+
 ** Install the storybook cli script globally
 
    #+BEGIN_SRC shell-script
@@ -66,7 +72,6 @@ font-family: "Lato", sans-serif;
 ** Add it to your project
 
    #+BEGIN_SRC shell-script
-     cd path/to/project
      getstorybook
    #+END_SRC
 
