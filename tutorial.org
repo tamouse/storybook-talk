@@ -292,6 +292,7 @@ Create the configuration directory and files:
 
    Every time the input field changes, an event is shown in the "Action Logger" area
 
+
 * Tips
 
 ** Organizing stories
@@ -306,11 +307,26 @@ Create the configuration directory and files:
    Reuse test data from your specs by organizing it to share
 
 
-
 ** use a Consumer
 
    - keep stories light
    - common elements to present the story
+
+#+REVEAL: split
+
+Example:
+
+#+BEGIN_SRC javascript
+  class Consumer extends React.Component {
+    render() {
+      <Component {...this.props} />
+    }
+  }
+
+  storiesOf("Component", module)
+    .add("example one", () => (<Consumer thing="one" /> ))
+    .add("example two", () => (<Consumer thing="two" /> ))
+#+END_SRC
 
 ** using jsdoc and markup
 
