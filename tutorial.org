@@ -192,22 +192,52 @@ Create the configuration directory and files:
 
 ** A simple component
 
+   Let's build a simple horizontal input field component.
+
+   This will be wrapped in a form in the application
+
+   #+REVEAL: split
+
+   #+BEGIN_SRC javascript
+     export class HorizontalInputField extends React.Component {
+       render() {
+         const { id, label, name, onChange } = this.props;
+         return (
+           <FormGroup>
+             <label for={name}>{label}</label>
+             <input
+               className="form-control"
+               id={id}
+               type="text"
+               name={name}
+               onChange={onChange}
+             />
+           </FormGroup>
+         );
+       }
+     }
+   #+END_SRC
+
 ** A simple set of stories
 
-* Interactions with components
+   The corresponding story will use wrap the component to display it properly
 
-** actions
-
-* Organizing stories
-
-** Follow the same organizing principles you use with tests
-
-   - in separate tree
-   - alongside component
-
-** Share test data
-
-   Reuse test data from your specs by organizing it to share
+   #+BEGIN_SRC javascript
+     import HorizontalInputField from "./index";
+     storiesOf("components/HorizontalInputField", module)
+       .add("basic example", () => (
+         <Wrapper>
+           <Form>
+             <HorizontalInputField
+               id="email-input-field"
+               name="email"
+               label="Email:"
+               onChange={noop}
+             />
+           </Form>
+         </Wrapper>
+      ));
+   #+END_SRC
 
 * Extending stories using addons
 
@@ -221,7 +251,61 @@ Create the configuration directory and files:
    - *Apollo*: a mock Apollo Client provider
    - *Storybook-router*: router providers for React and Vue
 
+* Actions Addon
+
+** Install the addon
+
+   #+BEGIN_SRC shell-script
+     yarn add @storybook/addon-actions
+   #+END_SRC
+
+** Add to configuration
+
+   #+BEGIN_SRC javascript
+     // .storybook/addons.js
+     import "@storybook/addons/register"
+   #+END_SRC
+
+** Add them to your story
+
+   #+BEGIN_SRC javascript
+     // ...
+     import { action } from "@storybook/addon-actions/register"
+     // ...
+
+     storiesOf("components/HorizontalInputField", module)
+       .add("basic example", () => (
+         <Wrapper>
+           <Form>
+             <HorizontalInputField
+               id="email-input-field"
+               name="email"
+               label="Email:"
+               onChange={action("email field changed")}
+             />
+           </Form>
+         </Wrapper>
+      ));
+   #+END_SRC
+
+** See the events as they trigger
+
+   Every time the input field changes, an event is shown in the "Action Logger" area
+
 * Tips
+
+** Organizing stories
+
+*** Follow the same organizing principles you use with tests
+
+   - in separate tree
+   - alongside component
+
+*** Share test data
+
+   Reuse test data from your specs by organizing it to share
+
+
 
 ** use a Consumer
 
