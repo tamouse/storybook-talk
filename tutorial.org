@@ -3,7 +3,7 @@
 #+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
 #+OPTIONS: toc:nil
 #+REVEAL_TRANS: none
-#+REVEAL_THEME: solarized
+#+REVEAL_THEME: moon
 #+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Storybook Tutorial">
 #+REVEAL_POSTAMBLE: <div> Created by Tamara Temple &lt;tamara@tamouse.org&gt; </div>
 #+REVEAL_PLUGINS: (markdown notes)
@@ -51,7 +51,7 @@ font-family: "Lato", sans-serif;
    - without app-specific dependencies and requirements
 
 
-* Installation / Configuration
+* Quick Setup and Go
 
   Start with your existing react app
 
@@ -84,6 +84,110 @@ font-family: "Lato", sans-serif;
 
      yarn storybook
    #+END_SRC
+* Slow Setup
+** Add storybook to your project
+
+After creating your react app, add storybook for react:
+
+#+BEGIN_SRC shell-script
+  yarn add @storybook/react
+#+END_SRC
+
+** Configure storybook
+
+Create the configuration directory and files:
+
+#+BEGIN_SRC shell-script
+  mkdir .storybook
+  touch .storybook/config.js
+#+END_SRC
+
+*** decide how you want to organize stories
+
+    This is how storybook finds stories.
+
+    - the quick way: load stories from a single directory
+    - the react way (?): stories next to components
+
+*** project structure
+
+    #+BEGIN_SRC
+    <project_root>/
+      .storybook/
+        config.js
+      src/
+        index.js
+        App.js
+        App.test.js
+        App.story.js
+    #+END_SRC
+
+*** load stories via webpack's require.context()
+
+    #+ATTR_REVEAL: :frag (fade-in)
+    - allows you to require files
+    - matches a pattern
+    - optionally recursing a directory
+    - See: [[https://webpack.js.org/guides/dependency-management/#require-context]]
+
+    #+REVEAL: split
+
+    #+BEGIN_SRC javascript
+      // .storybook/config.js
+      import { configure } from '@storybook/react';
+
+      function importAll(req) {
+        req.keys().forEach(filename => req(filename));
+      }
+
+      function loadStories() {
+        let req;
+        req = require.context('../src', true, /\.story\.js$/);
+        importAll(req);
+      }
+
+      configure(loadStories, module);
+    #+END_SRC
+
+** Write stories
+
+   Let's write the story for the main React App component
+
+   #+BEGIN_SRC javascript
+     // src/App.story.js
+     import React from "react";
+     import { storiesOf } from "@storybook/react";
+     import App from "./App";
+
+     storiesOf("Main React App", module).add("the app", () => <App />);
+   #+END_SRC
+
+** Run storybook
+
+   Add a script to ~package.json~ to run storybook
+
+   #+BEGIN_SRC javascript
+       "scripts": {
+         "start": "react-scripts start",
+         "build": "react-scripts build",
+         "test": "react-scripts test",
+         "eject": "react-scripts eject",
+         "storybook": "start-storybook -p 9009 -c .storybook"
+       },
+   #+END_SRC
+
+   #+REVEAL: split
+
+   Run the script and open your browser to ~http://localhost:9009~
+
+   #+BEGIN_SRC shell-script
+     yarn run storybook
+
+     # or just
+
+     yarn storybook
+   #+END_SRC
+
 * Basic usage
 
 ** A simple component
