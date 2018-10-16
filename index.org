@@ -25,5 +25,6 @@ font-family: "Lato", sans-serif;
 
 ** Storybook Tutorial
 
-   - Slides: [[./tutorial.html]]
+   - Slides: [[./tutorial.html][Tutorial]]
    - Demo Repo: [[https://github.com/tamouse/storybook_talk_demo/tree/01-start][github repo 01-start]]
+   - Lightning talk: [[./15-minute-intro.html][15 Minute Intro]]

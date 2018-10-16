@@ -1,10 +1,10 @@
 #+OPTIONS: reveal_center:t reveal_progress:t reveal_history:t reveal_control:t reveal_title_slide:nil
 #+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
 #+OPTIONS: toc:nil
-#+REVEAL_ROOT: //cdn.jsdelivr.net/reveal.js/3.0.0/
+#+REVEAL_ROOT: ./reveal.js
 #+REVEAL_TRANS: none
 #+REVEAL_THEME: moon
-#+REVEAL_HEAD_PREAMBLE: <meta name="description" content="description">
+#+REVEAL_HEAD_PREAMBLE: <meta name="description" content="lightning talk on storybook for react">
 #+REVEAL_POSTAMBLE: <div> Created by Tamara Temple &lt;tamara@tamouse.org&gt; </div>
 #+REVEAL_PLUGINS: (markdown notes)
 #+BEGIN_EXPORT html
