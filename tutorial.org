@@ -220,7 +220,7 @@ Create the configuration directory and files:
 
 ** A simple set of stories
 
-   The corresponding story will use wrap the component to display it properly
+   The corresponding story wraps the component to display it properly
 
    #+BEGIN_SRC javascript
      import HorizontalInputField from "./index";

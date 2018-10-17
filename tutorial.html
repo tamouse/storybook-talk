@@ -27,7 +27,7 @@
 <body>
 <div class="reveal">
 <div class="slides">
-<section id="sec-title-slide"><h1 class="title">Storybook Tutorial</h1><h2 class="author">Tamara Temple</h2><p class="date">Created: 2018-10-16 Tue 16:06</p>
+<section id="sec-title-slide"><h1 class="title">Storybook Tutorial</h1><h2 class="author">Tamara Temple</h2><p class="date">Created: 2018-10-16 Tue 21:55</p>
 </section>
 <style media="screen">
 @import url("https://fonts.googleapis.com/css?family=Montserrat:700,700i");
@@ -45,15 +45,15 @@ font-family: "Lato", sans-serif;
 </style>
 
 <section>
-<section id="slide-org7ff386d">
-<h2 id="org7ff386d">Introduction</h2>
+<section id="slide-org9eab142">
+<h2 id="org9eab142">Introduction</h2>
 <p>
 Storybook Tutorial
 </p>
 
 </section>
-<section id="slide-org6ce49fd">
-<h3 id="org6ce49fd">who am I</h3>
+<section id="slide-orgb5b8756">
+<h3 id="orgb5b8756">who am I</h3>
 <ul>
 <li class="fragment fade-in">Tamara Temple</li>
 <li class="fragment fade-in">github: tamouse</li>
@@ -67,8 +67,8 @@ Storybook Tutorial
 
 
 </section>
-<section id="slide-org8845bb6">
-<h3 id="org8845bb6">what is storybook?</h3>
+<section id="slide-org06dc97c">
+<h3 id="org06dc97c">what is storybook?</h3>
 <ul>
 <li class="fragment fade-in">UI development environment for UI components</li>
 <li class="fragment fade-in">visualize different states of your UI components</li>
@@ -83,8 +83,8 @@ Storybook Tutorial
 </section>
 </section>
 <section>
-<section id="slide-org9f8705e">
-<h2 id="org9f8705e">Quick Setup and Go</h2>
+<section id="slide-orgf94e6ad">
+<h2 id="orgf94e6ad">Quick Setup and Go</h2>
 <p>
 Start with your existing react app
 </p>
@@ -96,8 +96,8 @@ Start with your existing react app
 </div>
 
 </section>
-<section id="slide-orgc3d6f0d">
-<h3 id="orgc3d6f0d">Install the storybook cli script globally</h3>
+<section id="slide-org788037b">
+<h3 id="org788037b">Install the storybook cli script globally</h3>
 <div class="org-src-container">
 
 <pre  class="src src-shell-script">npm install -g @storybook/cli
@@ -109,8 +109,8 @@ yarn global add @storybook/cli
 </div>
 
 </section>
-<section id="slide-orge4f572b">
-<h3 id="orge4f572b">Add it to your project</h3>
+<section id="slide-org5610543">
+<h3 id="org5610543">Add it to your project</h3>
 <div class="org-src-container">
 
 <pre  class="src src-shell-script">getstorybook
@@ -118,8 +118,8 @@ yarn global add @storybook/cli
 </div>
 
 </section>
-<section id="slide-orgb710495">
-<h3 id="orgb710495">Start compiling stories</h3>
+<section id="slide-orgc6574d5">
+<h3 id="orgc6574d5">Start compiling stories</h3>
 <div class="org-src-container">
 
 <pre  class="src src-shell-script">npm run storybook
@@ -132,13 +132,13 @@ yarn storybook
 </section>
 </section>
 <section>
-<section id="slide-org99ef5d9">
-<h2 id="org99ef5d9">Slow Setup</h2>
-<div class="outline-text-2" id="text-org99ef5d9">
+<section id="slide-orgc681aa5">
+<h2 id="orgc681aa5">Slow Setup</h2>
+<div class="outline-text-2" id="text-orgc681aa5">
 </div>
 </section>
-<section id="slide-orgbf5a695">
-<h3 id="orgbf5a695">Add storybook to your project</h3>
+<section id="slide-org34be4a8">
+<h3 id="org34be4a8">Add storybook to your project</h3>
 <p>
 After creating your react app, add storybook for react:
 </p>
@@ -150,8 +150,8 @@ After creating your react app, add storybook for react:
 </div>
 
 </section>
-<section id="slide-org9b1519e">
-<h3 id="org9b1519e">Configure storybook</h3>
+<section id="slide-org9b14298">
+<h3 id="org9b14298">Configure storybook</h3>
 <p>
 Create the configuration directory and files:
 </p>
@@ -164,8 +164,8 @@ touch .storybook/config.js
 </div>
 
 </section>
-<section id="slide-orge60da4e">
-<h4 id="orge60da4e">decide how you want to organize stories</h4>
+<section id="slide-orga141eae">
+<h4 id="orga141eae">decide how you want to organize stories</h4>
 <p>
 This is how storybook finds stories.
 </p>
@@ -177,8 +177,8 @@ This is how storybook finds stories.
 </ul>
 
 </section>
-<section id="slide-org8af233f">
-<h4 id="org8af233f">project structure</h4>
+<section id="slide-org66dc058">
+<h4 id="org66dc058">project structure</h4>
 <pre  class="example">
 &lt;project_root&gt;/
   .storybook/
@@ -191,8 +191,8 @@ This is how storybook finds stories.
 </pre>
 
 </section>
-<section id="slide-orgb8437b6">
-<h4 id="orgb8437b6">load stories via webpack's require.context()</h4>
+<section id="slide-org2132fcd">
+<h4 id="org2132fcd">load stories via webpack's require.context()</h4>
 <ul>
 <li class="fragment fade-in">allows you to require files</li>
 <li class="fragment fade-in">matches a pattern</li>
@@ -224,8 +224,8 @@ configure(loadStories, module);
 </div>
 
 </section>
-<section id="slide-org085b5c9">
-<h3 id="org085b5c9">Write stories</h3>
+<section id="slide-org2cc6e40">
+<h3 id="org2cc6e40">Write stories</h3>
 <p>
 Let's write the story for the main React App component
 </p>
@@ -242,8 +242,8 @@ storiesOf(<span style="color: #ffff00;">"Main React App"</span>, module).add(<sp
 </div>
 
 </section>
-<section id="slide-orge3653b8">
-<h3 id="orge3653b8">Run storybook</h3>
+<section id="slide-orgce46dd1">
+<h3 id="orgce46dd1">Run storybook</h3>
 <p>
 Add a script to <code>package.json</code> to run storybook
 </p>
@@ -280,13 +280,13 @@ yarn storybook
 </section>
 </section>
 <section>
-<section id="slide-org08311d8">
-<h2 id="org08311d8">Basic usage</h2>
-<div class="outline-text-2" id="text-org08311d8">
+<section id="slide-org51294f0">
+<h2 id="org51294f0">Basic usage</h2>
+<div class="outline-text-2" id="text-org51294f0">
 </div>
 </section>
-<section id="slide-orge9eb7bc">
-<h3 id="orge9eb7bc">A simple component</h3>
+<section id="slide-orge7be168">
+<h3 id="orge7be168">A simple component</h3>
 <p>
 Let's build a simple horizontal input field component.
 </p>
@@ -321,10 +321,10 @@ This will be wrapped in a form in the application
 </div>
 
 </section>
-<section id="slide-org87ebfab">
-<h3 id="org87ebfab">A simple set of stories</h3>
+<section id="slide-org835a8da">
+<h3 id="org835a8da">A simple set of stories</h3>
 <p>
-The corresponding story will use wrap the component to display it properly
+The corresponding story wraps the component to display it properly
 </p>
 
 <div class="org-src-container">
@@ -349,8 +349,8 @@ storiesOf(<span style="color: #ffff00;">"components/HorizontalInputField"</span>
 </section>
 </section>
 <section>
-<section id="slide-org796ffcb">
-<h2 id="org796ffcb">Extending stories using addons</h2>
+<section id="slide-org494c844">
+<h2 id="org494c844">Extending stories using addons</h2>
 <p>
 Besides the aforementioned <code>actions</code> addon, storybook has many other <b>addons</b>:
 </p>
@@ -360,8 +360,8 @@ Besides the aforementioned <code>actions</code> addon, storybook has many other 
 </p>
 
 </section>
-<section id="slide-orgecd98cf">
-<h3 id="orgecd98cf">Small set I've used:</h3>
+<section id="slide-org1523978">
+<h3 id="org1523978">Small set I've used:</h3>
 <ul>
 <li><b>Actions</b>: event "inspector"</li>
 <li><b>Apollo</b>: a mock Apollo Client provider</li>
@@ -372,13 +372,13 @@ Besides the aforementioned <code>actions</code> addon, storybook has many other 
 </section>
 </section>
 <section>
-<section id="slide-org0f5f9ee">
-<h2 id="org0f5f9ee">Actions Addon</h2>
-<div class="outline-text-2" id="text-org0f5f9ee">
+<section id="slide-org26cc524">
+<h2 id="org26cc524">Actions Addon</h2>
+<div class="outline-text-2" id="text-org26cc524">
 </div>
 </section>
-<section id="slide-org018c22e">
-<h3 id="org018c22e">Install the addon</h3>
+<section id="slide-org577d4c3">
+<h3 id="org577d4c3">Install the addon</h3>
 <div class="org-src-container">
 
 <pre  class="src src-shell-script">yarn add @storybook/addon-actions
@@ -386,8 +386,8 @@ Besides the aforementioned <code>actions</code> addon, storybook has many other 
 </div>
 
 </section>
-<section id="slide-orgdb82f18">
-<h3 id="orgdb82f18">Add to configuration</h3>
+<section id="slide-org2251b59">
+<h3 id="org2251b59">Add to configuration</h3>
 <div class="org-src-container">
 
 <pre  class="src src-javascript"><span style="color: #ff0000;">// </span><span style="color: #ff0000;">.storybook/addons.js</span>
@@ -396,8 +396,8 @@ Besides the aforementioned <code>actions</code> addon, storybook has many other 
 </div>
 
 </section>
-<section id="slide-org349b5d1">
-<h3 id="org349b5d1">Add them to your story</h3>
+<section id="slide-orgc36f27a">
+<h3 id="orgc36f27a">Add them to your story</h3>
 <div class="org-src-container">
 
 <pre  class="src src-javascript"><span style="color: #ff0000;">// </span><span style="color: #ff0000;">...</span>
@@ -421,8 +421,8 @@ storiesOf(<span style="color: #ffff00;">"components/HorizontalInputField"</span>
 </div>
 
 </section>
-<section id="slide-org3e66294">
-<h3 id="org3e66294">See the events as they trigger</h3>
+<section id="slide-org8755436">
+<h3 id="org8755436">See the events as they trigger</h3>
 <p>
 Every time the input field changes, an event is shown in the "Action Logger" area
 </p>
@@ -431,18 +431,18 @@ Every time the input field changes, an event is shown in the "Action Logger" are
 </section>
 </section>
 <section>
-<section id="slide-orga25c33f">
-<h2 id="orga25c33f">Tips</h2>
-<div class="outline-text-2" id="text-orga25c33f">
+<section id="slide-org46d44ea">
+<h2 id="org46d44ea">Tips</h2>
+<div class="outline-text-2" id="text-org46d44ea">
 </div>
 </section>
-<section id="slide-org3214ced">
-<h3 id="org3214ced">Organizing stories</h3>
-<div class="outline-text-3" id="text-org3214ced">
+<section id="slide-orgf80424f">
+<h3 id="orgf80424f">Organizing stories</h3>
+<div class="outline-text-3" id="text-orgf80424f">
 </div>
 </section>
-<section id="slide-org713b45c">
-<h4 id="org713b45c">Follow the same organizing principles you use with tests</h4>
+<section id="slide-orgd508efa">
+<h4 id="orgd508efa">Follow the same organizing principles you use with tests</h4>
 <ul>
 <li>in separate tree</li>
 <li>alongside component</li>
@@ -450,16 +450,16 @@ Every time the input field changes, an event is shown in the "Action Logger" are
 </ul>
 
 </section>
-<section id="slide-org2584259">
-<h4 id="org2584259">Share test data</h4>
+<section id="slide-org177a532">
+<h4 id="org177a532">Share test data</h4>
 <p>
 Reuse test data from your specs by organizing it to share
 </p>
 
 
 </section>
-<section id="slide-org026607c">
-<h3 id="org026607c">use a Consumer</h3>
+<section id="slide-org2e58ddf">
+<h3 id="org2e58ddf">use a Consumer</h3>
 <ul>
 <li>keep stories light</li>
 <li>common elements to present the story</li>
@@ -488,15 +488,15 @@ storiesOf(<span style="color: #ffff00;">"Component"</span>, module)
 </div>
 
 </section>
-<section id="slide-org76370ea">
-<h3 id="org76370ea">using jsdoc and markup</h3>
+<section id="slide-org84e13ba">
+<h3 id="org84e13ba">using jsdoc and markup</h3>
 <p>
 Extract and display in story
 </p>
 
 </section>
-<section id="slide-orgd822e3b">
-<h3 id="orgd822e3b">generators</h3>
+<section id="slide-org75471f6">
+<h3 id="org75471f6">generators</h3>
 <p>
 Create component, spec, and story boilerplate
 </p>
@@ -504,8 +504,8 @@ Create component, spec, and story boilerplate
 </section>
 </section>
 <section>
-<section id="slide-org8aab3a4">
-<h2 id="org8aab3a4">@me</h2>
+<section id="slide-orgca50d6f">
+<h2 id="orgca50d6f">@me</h2>
 <ul>
 <li>Tamara Temple</li>
 <li>github: tamouse</li>
